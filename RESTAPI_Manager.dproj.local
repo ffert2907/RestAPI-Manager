@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/11/22 14:41:08.000.043,=C:\DATA\DELPHI\PROJETS\Unit1.pas</Transaction>
+    <Transaction>2022/12/01 15:09:50.000.504,=C:\DATA\DELPHI\PROJETS\Unit1.pas</Transaction>
+    <Transaction>2022/12/01 15:10:03.000.433,=C:\DATA\DELPHI\PROJETS\Unit2.pas</Transaction>
+    <Transaction>2022/12/01 15:13:00.000.454,C:\DATA\DELPHI\PROJETS\Unit2.pas=C:\DATA\DELPHI\PROJETS\Test_API\u_REST_API_Generic.pas</Transaction>
+    <Transaction>2022/12/01 15:13:11.000.303,C:\DATA\DELPHI\PROJETS\Unit1.pas=C:\DATA\DELPHI\PROJETS\Test_API\Unit1.pas</Transaction>
+    <Transaction>2022/12/01 15:13:11.000.303,C:\DATA\DELPHI\PROJETS\Unit1.fmx=C:\DATA\DELPHI\PROJETS\Test_API\Unit1.fmx</Transaction>
+    <Transaction>2022/12/01 15:13:25.000.670,C:\DATA\DELPHI\PROJETS\Project1.dproj=C:\DATA\DELPHI\PROJETS\Test_API\Test_API.dproj</Transaction>
+    <Transaction>2023/02/14 22:46:31.000.689,D:\DELPHI\Test_API\Test_API.dproj=D:\DELPHI\Test_API\RESTAPI_Manager.dproj</Transaction>
+    <Transaction>2023/02/14 22:48:49.000.923,D:\DELPHI\Test_API\Unit1.fmx=D:\DELPHI\Test_API\Main.fmx</Transaction>
+    <Transaction>2023/02/14 22:48:49.000.923,D:\DELPHI\Test_API\Unit1.pas=D:\DELPHI\Test_API\Main.pas</Transaction>
+    <Transaction>2023/02/26 19:54:40.798,=D:\DELPHI\Test_API\Win32\Debug\u_API_TEAMCOINVESTOR.pas</Transaction>
+    <Transaction>2023/02/26 19:58:04.243,D:\DELPHI\Test_API\Win32\Debug\u_API_TEAMCOINVESTOR.pas=</Transaction>
+    <Transaction>2023/02/26 19:59:01.021,=D:\DELPHI\Test_API\Win32\Debug\u_API_TEAMCOINVESTOR.pas</Transaction>
+    <Transaction>2023/02/26 20:02:14.150,D:\DELPHI\Test_API\Win32\Debug\u_API_TEAMCOINVESTOR.pas=</Transaction>
+    <Transaction>2023/02/26 20:04:59.617,=D:\DELPHI\Test_API\Win32\Debug\u_API_TEAMCOINVESTOR.pas</Transaction>
+    <Transaction>2023/02/26 20:19:42.043,D:\DELPHI\Test_API\Win32\Debug\u_API_TEAMCOINVESTOR.pas=</Transaction>
+    <Transaction>2023/02/26 20:21:08.528,=D:\DELPHI\Test_API\Win32\Debug\u_API_TEAMCOINVESTOR.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

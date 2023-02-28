@@ -1,0 +1,805 @@
+object F_Main: TF_Main
+  Left = 0
+  Top = 0
+  Caption = 'API Generator'
+  ClientHeight = 616
+  ClientWidth = 1061
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object M_Log: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Bottom
+    Position.Y = 455.000000000000000000
+    Size.Width = 1061.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 1057.000000000000000000
+    Viewport.Height = 61.000000000000000000
+  end
+  object SG_Data: TStringGrid
+    Align = Bottom
+    CanFocus = True
+    ClipChildren = True
+    Position.Y = 528.000000000000000000
+    Size.Width = 1061.000000000000000000
+    Size.Height = 88.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 1057.000000000000000000
+    Viewport.Height = 63.000000000000000000
+  end
+  object Splitter1: TSplitter
+    Align = Bottom
+    Cursor = crVSplit
+    MinSize = 20.000000000000000000
+    Position.Y = 447.000000000000000000
+    Size.Width = 1061.000000000000000000
+    Size.Height = 8.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 1061.000000000000000000
+    Size.Height = 447.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object TabControl1: TTabControl
+      Align = Client
+      Size.Width = 1061.000000000000000000
+      Size.Height = 447.000000000000000000
+      Size.PlatformDefault = False
+      TabIndex = 1
+      TabOrder = 0
+      TabPosition = PlatformDefault
+      Sizes = (
+        1061s
+        421s
+        1061s
+        421s
+        1061s
+        421s
+        1061s
+        421s
+        1061s
+        421s
+        1061s
+        421s)
+      object TabItem1: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 47.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'CALL'
+        ExplicitSize.cx = 47.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object B_TestAPI: TButton
+          Position.X = 464.000000000000000000
+          Position.Y = 21.000000000000000000
+          Size.Width = 169.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = 'Test'
+          OnClick = B_TestAPIClick
+        end
+        object E_API: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 3
+          Text = 
+            'https://digital.iservices.rte-france.com/open_api/ecowatt/v4/sig' +
+            'nals'
+          Position.X = 8.000000000000000000
+          Position.Y = 56.000000000000000000
+          Size.Width = 425.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object E_API_sandbox: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 2
+          Position.X = 8.000000000000000000
+          Position.Y = 32.000000000000000000
+          Size.Width = 425.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object E_ApiName: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 5
+          Text = 'GetInfo'
+          Position.X = 120.000000000000000000
+          Position.Y = 88.000000000000000000
+        end
+        object E_Group: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 6
+          Text = 'GetInfo'
+          Position.X = 8.000000000000000000
+          Position.Y = 88.000000000000000000
+        end
+        object E_URL: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Text = 'https://www.monecowatt.fr/'
+          Position.X = 8.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 177.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object TI_API: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = True
+        Size.Width = 38.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'API'
+        OnClick = TI_APIClick
+        ExplicitSize.cx = 38.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object CB_AuthMode: TComboBox
+          Items.Strings = (
+            'None'
+            'APIKEY'
+            'OAut'
+            '')
+          ItemIndex = 0
+          Position.X = 16.000000000000000000
+          Position.Y = 38.000000000000000000
+          Size.Width = 183.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+        end
+        object E_Groupe: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Position.X = 207.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 170.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Group'
+        end
+        object E_Name: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 2
+          Position.X = 385.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 183.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Name'
+        end
+        object CB_TypeRequest: TComboBox
+          Items.Strings = (
+            'GET'
+            'POST'
+            'PUT'
+            'DELETE'
+            'PATCH')
+          ItemIndex = 0
+          Position.X = 207.000000000000000000
+          Position.Y = 38.000000000000000000
+          TabOrder = 4
+        end
+        object E_APIURL: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 7
+          Position.X = 16.000000000000000000
+          Position.Y = 70.000000000000000000
+          Size.Width = 361.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'API base URL'
+          OnChange = E_APIURLChange
+        end
+        object E_RequestBody: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akTop, akRight]
+          TabOrder = 9
+          Position.X = 16.000000000000000000
+          Position.Y = 161.000000000000000000
+          Size.Width = 1040.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Request Body : JSON'
+        end
+        object E_APIResponse: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akTop, akRight]
+          TabOrder = 10
+          Position.X = 16.000000000000000000
+          Position.Y = 191.000000000000000000
+          Size.Width = 1040.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Request Response : JSON'
+        end
+        object SG_API: TStringGrid
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          CanFocus = True
+          ClipChildren = True
+          Position.X = 1.000000000000000000
+          Position.Y = 304.000000000000000000
+          Size.Width = 1060.000000000000000000
+          Size.Height = 109.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 12
+          Viewport.Width = 1056.000000000000000000
+          Viewport.Height = 84.000000000000000000
+        end
+        object BN_API: TBindNavigator
+          Position.X = 728.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 320.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 13
+          OnClick = BN_APIClick
+          DataSource = BSDB_API
+          xRadius = 4.000000000000000000
+          yRadius = 4.000000000000000000
+        end
+        object E_Service: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 0
+          Position.X = 16.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 183.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Service'
+        end
+        object E_OAuthURL: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 5
+          Position.X = 385.000000000000000000
+          Position.Y = 38.000000000000000000
+          Size.Width = 335.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'OAuth URL'
+        end
+        object E_Conversion: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akTop, akRight]
+          TabOrder = 11
+          Position.X = 16.000000000000000000
+          Position.Y = 221.000000000000000000
+          Size.Width = 1040.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 
+            'Conversion : Field1=>Name1(val1=valeur1,val2=valeur2);Field2=>Na' +
+            'me2;Field3=>Name3'
+        end
+        object E_SuccessValue: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 8
+          Text = '1'
+          Position.X = 514.000000000000000000
+          Position.Y = 251.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Success response value'
+        end
+        object SB_SaveAPI: TSpeedButton
+          Position.X = 952.000000000000000000
+          Position.Y = 39.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Save API List'
+          OnClick = SB_SaveAPIClick
+        end
+        object SB_OpenAPI: TSpeedButton
+          Position.X = 728.000000000000000000
+          Position.Y = 39.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Open API List'
+          OnClick = SB_OpenAPIClick
+        end
+        object E_PostData: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akTop, akRight]
+          TabOrder = 19
+          Position.X = 16.000000000000000000
+          Position.Y = 130.000000000000000000
+          Size.Width = 1040.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Post Data Field1=#Value1#|Field2=#Value2|'
+        end
+        object CB_Header: TComboEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 20
+          ItemHeight = 19.000000000000000000
+          Items.Strings = (
+            ''
+            'Accept=application/json'
+            'Content-Type=application/json'
+            'Content-Type=application/json|Authorization=basic #AuthCode#')
+          ItemIndex = -1
+          Position.X = 81.000000000000000000
+          Position.Y = 100.000000000000000000
+          Size.Width = 975.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Label1: TLabel
+          Position.X = 16.000000000000000000
+          Position.Y = 102.000000000000000000
+          Size.Width = 57.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Header'
+          TabOrder = 21
+        end
+        object E_FieldData: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 18
+          Text = 'data'
+          Position.X = 16.000000000000000000
+          Position.Y = 250.000000000000000000
+          Size.Width = 241.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Response Field that contain Data'
+        end
+        object E_FieldSuccess: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 17
+          Text = 'success'
+          Position.X = 265.000000000000000000
+          Position.Y = 250.000000000000000000
+          Size.Width = 241.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Response Field that contain Success of resquest'
+        end
+        object E_FieldMessage: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 16
+          Text = 'message'
+          Position.X = 659.000000000000000000
+          Position.Y = 251.000000000000000000
+          Size.Width = 241.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Response Field that contain Error message'
+        end
+        object E_APIRoute: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 22
+          Position.X = 385.000000000000000000
+          Position.Y = 70.000000000000000000
+          Size.Width = 335.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'API Route'
+        end
+        object B_Call: TButton
+          Position.X = 576.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 23
+          Text = 'Test this API Call'
+          OnClick = B_CallClick
+        end
+        object E_URLDebug: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 6
+          Position.X = 728.000000000000000000
+          Position.Y = 70.000000000000000000
+          Size.Width = 326.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'API base URL Debug '
+          OnChange = E_APIURLChange
+        end
+        object SB_codeDelphi: TButton
+          Position.X = 16.000000000000000000
+          Position.Y = 277.000000000000000000
+          Size.Width = 217.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 25
+          Text = 'Generate Delphi function Code '
+          OnClick = SB_codeDelphiClick
+        end
+        object B_CodeDelphiGenerateClass: TButton
+          Position.X = 265.000000000000000000
+          Position.Y = 277.000000000000000000
+          Size.Width = 217.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 24
+          Text = 'Generate Delphi Class'
+          OnClick = B_CodeDelphiGenerateClassClick
+        end
+        object SB_SaveFile: TSpeedButton
+          Position.X = 514.000000000000000000
+          Position.Y = 281.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Save Delphi code to File'
+          OnClick = SB_SaveFileClick
+        end
+      end
+      object Ti_Swagger: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 66.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Swagger'
+        ExplicitSize.cx = 66.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object Label2: TLabel
+          Position.X = 9.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 337.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Automatically connect to swagger and generate API service'
+          TabOrder = 0
+        end
+      end
+      object TI_Keys: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 44.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Keys'
+        OnClick = TI_KeysClick
+        ExplicitSize.cx = 44.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object SG_Keys: TStringGrid
+          Anchors = [akLeft, akTop, akRight]
+          CanFocus = True
+          ClipChildren = True
+          Position.X = 1.000000000000000000
+          Position.Y = 136.000000000000000000
+          Size.Width = 1060.000000000000000000
+          Size.Height = 223.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 14
+          Viewport.Width = 1056.000000000000000000
+          Viewport.Height = 198.000000000000000000
+        end
+        object BN_Keys: TBindNavigator
+          Position.X = 729.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 320.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 15
+          OnClick = BN_KeysClick
+          DataSource = BSDB_Keys
+          xRadius = 4.000000000000000000
+          yRadius = 4.000000000000000000
+        end
+        object SB_OpenKeys: TSpeedButton
+          Position.X = 729.000000000000000000
+          Position.Y = 46.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 35.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Open Keys List'
+          OnClick = SB_OpenKeysClick
+        end
+        object SB_SaveKeys: TSpeedButton
+          Position.X = 957.000000000000000000
+          Position.Y = 54.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 35.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Save Keys List'
+          OnClick = SB_SaveKeysClick
+        end
+        object E_ServiceKey: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 0
+          Position.X = 24.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 183.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Service'
+        end
+        object E_GroupKey: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Position.X = 215.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 170.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Group'
+        end
+        object E_NameKey: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 2
+          Position.X = 393.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 183.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Name'
+        end
+        object CB_KindKey: TComboBox
+          Items.Strings = (
+            'None '
+            'UserPwd'
+            'APIKey'
+            'OAuth')
+          ItemIndex = 0
+          Position.X = 24.000000000000000000
+          Position.Y = 46.000000000000000000
+          Size.Width = 183.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 18
+        end
+        object CB_EncryptionKey: TComboBox
+          Items.Strings = (
+            'None'
+            'Base64')
+          ItemIndex = 0
+          Position.X = 215.000000000000000000
+          Position.Y = 46.000000000000000000
+          Size.Width = 170.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 19
+        end
+        object E_KeyName: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 21
+          Position.X = 24.000000000000000000
+          Position.Y = 76.000000000000000000
+          Size.Width = 361.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Key Name'
+        end
+        object E_KeyValue: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akTop, akRight]
+          TabOrder = 20
+          Position.X = 24.000000000000000000
+          Position.Y = 106.000000000000000000
+          Size.Width = 1025.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Key Value'
+        end
+        object L_TS: TLabel
+          Position.X = 400.000000000000000000
+          Position.Y = 78.000000000000000000
+          Size.Width = 176.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'TimeStamp'
+          TabOrder = 22
+        end
+      end
+      object TI_OAuth: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 55.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'OAuth'
+        ExplicitSize.cx = 55.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object B_OAuth: TButton
+          Position.X = 448.000000000000000000
+          Position.Y = 32.000000000000000000
+          Size.Width = 169.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 7
+          Text = 'Get OAuth2 Token'
+          OnClick = B_OAuthClick
+        end
+        object E_Authorization: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 9
+          Text = 
+            'ZTY1MGI0NzUtOWNmOS00MjAwLTg0YzUtZjA3ZWU1YTlkY2RiOmNhMGUxOWIwLTc1' +
+            'YzktNDkxYy1hMDlmLWFhNzgxNjg1NWYxNA=='
+          Position.X = 240.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 473.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object TI_Proxy: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 50.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Proxy'
+        ExplicitSize.cx = 50.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object E_ProxyPort: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 12
+          Text = '8080'
+          Position.X = 680.000000000000000000
+          Position.Y = 32.000000000000000000
+          Size.Width = 169.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object E_ProxyServer: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 13
+          Text = '192.168.192.11'
+          Position.X = 680.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 169.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object E_UserName: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 11
+          Text = 'fabien.fert'
+          Position.X = 680.000000000000000000
+          Position.Y = 56.000000000000000000
+          Size.Width = 169.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object E_Pwd: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 10
+          Text = 'Aaaa1222'
+          Position.X = 680.000000000000000000
+          Position.Y = 80.000000000000000000
+          Size.Width = 169.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+    end
+  end
+  object SD: TSaveDialog
+    DefaultExt = '.API'
+    Filter = '*.api'
+    Left = 1016
+    Top = 184
+  end
+  object OD: TOpenDialog
+    Left = 1016
+    Top = 232
+  end
+  object Splitter2: TSplitter
+    Align = Bottom
+    Cursor = crVSplit
+    MinSize = 20.000000000000000000
+    Position.Y = 520.000000000000000000
+    Size.Width = 1061.000000000000000000
+    Size.Height = 8.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object BindList: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 780
+    Top = 245
+    object LinkGridToDataSourceBSDB_API: TLinkGridToDataSource
+      Category = 'Liaisons rapides'
+      DataSource = BSDB_API
+      GridControl = SG_API
+      Columns = <>
+    end
+    object LinkGridToDataSourceBSDB_Keys: TLinkGridToDataSource
+      Category = 'Liaisons rapides'
+      DataSource = BSDB_Keys
+      GridControl = SG_Keys
+      Columns = <>
+    end
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Liaisons rapides'
+      DataSource = BSDB_Data
+      GridControl = SG_Data
+      Columns = <>
+    end
+  end
+  object DS_APILIst: TDataSource
+    OnDataChange = DS_APILIstDataChange
+    Left = 856
+    Top = 186
+  end
+  object BSDB_API: TBindSourceDB
+    ScopeMappings = <>
+    Left = 856
+    Top = 242
+  end
+  object FDStanStorageBinLink1: TFDStanStorageBinLink
+    Left = 857
+    Top = 302
+  end
+  object FDStanStorageJSONLink1: TFDStanStorageJSONLink
+    Left = 968
+    Top = 329
+  end
+  object DS_KeyList: TDataSource
+    Left = 944
+    Top = 184
+  end
+  object BSDB_Keys: TBindSourceDB
+    ScopeMappings = <>
+    Left = 944
+    Top = 234
+  end
+  object FDMemTable1: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 569
+    Top = 322
+  end
+  object DS_Data: TDataSource
+    Left = 737
+    Top = 378
+  end
+  object BSDB_Data: TBindSourceDB
+    DataSource = DS_Data
+    ScopeMappings = <>
+    Left = 736
+    Top = 434
+  end
+  object SD_Delphi: TSaveDialog
+    Left = 720
+    Top = 304
+  end
+end
